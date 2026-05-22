@@ -56,7 +56,7 @@ Install these on your Windows host machine:
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/YOUR-USERNAME/devops-lab.git
+git clone https://github.com/IsharaEd/Devops-project-python-API.git
 cd devops-lab
 ```
 
