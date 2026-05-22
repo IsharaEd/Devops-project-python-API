@@ -1,0 +1,26 @@
+services:
+  app:
+    container_name: python-api
+    build: .
+    ports:
+      - "5000:5000"
+    networks:
+      - flask-network
+    depends_on:
+      - db
+
+  db:
+    container_name: postgres-db
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: flask-db
+      POSTGRES_USER: flask
+      POSTGRES_PASSWORD: test@123
+    networks:
+      - flask-network
+
+networks:
+  flask-network:
+    driver: bridge
